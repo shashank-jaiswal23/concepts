@@ -11,7 +11,7 @@ class App extends Component{
     return (
       <div>
         <span>{this.formatCount()}</span>
-        <button>Increate</button>
+        <button className="btn btn-danger">Increate</button>
       </div>
     )
   }
