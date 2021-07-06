@@ -1,13 +1,23 @@
 import React, {Component} from 'react'
 
 class App extends Component{
-  state = {}
+  //state is an object containing data to be rendered
+  state = {
+    count: 0
+  }
 
   render(){
     //babel will convert this jsx into React.createElement("div"). 
     return (
-      <div>Hello class component</div>
+      <div>
+        <span>{this.formatCount()}</span>
+        <button>Increate</button>
+      </div>
     )
+  }
+
+  formatCount(){
+    return this.state.count===0 ? <h1>Zero</h1> : this.state.count
   }
 }
 
